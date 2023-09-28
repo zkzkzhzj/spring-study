@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<!-- thymeleaf 탬플릿을 쓰겠다 매핑 -->
+<html xmlns:th="http://www.thymeleaf.org" lang="Ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Guys</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<!-- 컨트롤러의 model 내부의 data 를 가져옴 -->
+<p th:text="'안녕하슈? ' + ${data} + '씨'">안녕하세요. 이름모를 손님</p>
+</body>
+</html>
