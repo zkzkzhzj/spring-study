@@ -2,14 +2,18 @@ package com.zkzkzhzj.study.service;
 
 import com.zkzkzhzj.study.domain.Member;
 import com.zkzkzhzj.study.repository.MemberRepository;
-import com.zkzkzhzj.study.repository.MemoryMemberRepository;
 
 import java.util.List;
 import java.util.Optional;
 
 public class MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    // 테스트에서 같은 레포지토리를 사용하기 위해 주입받는
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     /**
      * 회원 가입
