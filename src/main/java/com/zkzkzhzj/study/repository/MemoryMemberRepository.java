@@ -9,7 +9,7 @@ public class MemoryMemberRepository implements MemberRepository {
 
     // 실무에서는 동시성 문제가 있어 concurrent 를 사용해야 한다
     private static Map<Long, Member> store = new HashMap<>();
-    // 시퀀스 또한 AtomicLong 을 사용해야 한다 ttt
+    // 시퀀스 또한 AtomicLong 을 사용해야 한다
     private static Long sequence = 0L;
 
     @Override
